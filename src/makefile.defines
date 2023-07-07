@@ -1,0 +1,106 @@
+include makefile.include
+
+#########################
+# application variables #
+#########################
+# Android Notes         #
+#########################
+# * Android domain and name cannot contain '-' or '_' characters
+#########################
+APP_COMPANY = tcubedsoftware
+APP_NAME = color-cars
+APP_TITLE = Color\ Cars
+APP_VERSION = 0.1
+APP_RELEASE = 1
+APP_PUBLISHER = T\ Cubed\ Software
+APP_COPYRIGHT = Copyright\ (C)\ 2023\ T\ Cubed\ Software.
+APP_ANDROID_PACKAGE = com.tcubedsoftware.colorcars
+APP_ORIENTATION = portrait
+APP_URL = https://www.tcubedsoftware.com
+APP_OBJECTS = t3net/t3net.o t3net/leaderboard.o avc/avc.o main.o game.o intro.o leaderboard.o text.o particle.o color.o bg_object.o credits.o privacy.o
+#APP_LIBS =
+APP_CFLAGS = -O2 -Wall -I.
+#APP_EXTRA_TARGET =
+APP_PACKAGE_DIR = ../packages
+app_clean:
+#	@
+
+##################
+# Mac OS X stuff #
+##################
+MACOS_CFLAGS = -DT3NET_NO_LIBCURL
+#MACOS_PLATFORM_OBJECTS =
+#MACOS_PLATFORM_LIBS =
+MACOS_DEPEND_LIBS =
+#MACOS_PLATFORM_TARGET =
+
+###############
+# Linux stuff #
+###############
+#LINUX_CFLAGS =
+#LINUX_PLATFORM_OBJECTS =
+#LINUX_PLATFORM_LIBS =
+LINUX_DEPEND_LIBS = -lcurl
+#LINUX_PLATFORM_TARGET =
+
+################################################
+# Linux static stuff (for binary distrubution) #
+################################################
+#LINUX_STATIC_CFLAGS =
+#LINUX_STATIC_PLATFORM_OBJECTS =
+#LINUX_STATIC_PLATFORM_LIBS =
+LINUX_STATIC_DEPEND_LIBS = -lcurl
+#LINUX_STATIC_PLATFORM_TARGET =
+
+##############################
+# MinGW cross-compiler stuff #
+##############################
+MINGW_CROSS_CFLAGS = -DCURL_STATICLIB
+#MINGW_CROSS_PLATFORM_OBJECTS =
+MINGW_CROSS_PLATFORM_LIBS = -lcurl -lwldap32
+#MINGW_CROSS_PLATFORM_TARGET =
+
+###############
+# MinGW stuff #
+###############
+MINGW_CFLAGS = -DCURL_STATICLIB
+#MINGW_PLATFORM_OBJECTS =
+MINGW_PLATFORM_LIBS = -lcurl -lwldap32
+#MINGW_PLATFORM_TARGET =
+
+##############
+# MSYS stuff #
+##############
+MSYS_CFLAGS = -DCURL_STATICLIB
+#MSYS_PLATFORM_OBJECTS =
+MSYS_PLATFORM_LIBS = -lcurl
+#MSYS_PLATFORM_TARGET =
+
+#################
+# Android stuff #
+#################
+#ANDROID_CFLAGS =
+#ANDROID_PLATFORM_OBJECTS =
+ANDROID_PLATFORM_LIBS = -lcurl -lz
+#ANDROID_PLATFORM_TARGET =
+
+#############
+# iOS stuff #
+#############
+#IPHONE_CFLAGS =
+#IPHONE_PLATFORM_OBJECTS =
+IPHONE_PLATFORM_LIBS = -lcurl-static
+#IPHONE_PLATFORM_TARGET =
+
+##########################
+# Debian packaging stuff #
+##########################
+DEBIAN_APP_NAME = $(subst _,-,$(APP_NAME))
+DEBIAN_SECTION = games
+DEBIAN_MENU_SECTION = Games
+DEBIAN_DESKTOP_CATEGORIES = Game
+DEBIAN_DIR = games
+DEBIAN_DEPENDS = libc6
+DEBIAN_MAINTAINER = Todd\ Cope\ \<todd\@t3-i.com\>
+DEBIAN_DESCRIPTION = Color\ matching\ arcade\ action.
+DEBIAN_LONG_DESCRIPTION = Dot\ to\ Dot\ Sweep\ is\ an\ arcade-style\ color\ matching\ game.\ Collect\ dots\ that\ match\ your\ color\ while\ avoiding\ all\ other\ dots.\ The\ game\ is\ inspired\ by\ classic\ arcade\ games\ and\ takes\ cues\ from\ modern\ games.\ The\ simple\ gameplay\ mechanics\ coupled\ with\ increasingly\ difficult\ levels\ allows\ players\ of\ all\ skill\ levels\ to\ enjoy\ playing.\ Try\ to\ beat\ your\ personal\ best\ score\ or,\ optionally,\ compete\ for\ the\ top\ spot\ on\ the\ worldwide\ leaderboard.

@@ -1,0 +1,210 @@
+v1.2.1
+------
+
+[ ]Check for initial click during gameplay so we don't drop onto the board if
+   if we already had the mouse button down.
+
+[ ]Window is too small on Macs with high resolution display. Consider adding
+   option to set the window size.
+
+[ ]Consider adding a small border around the gameplay area in the desktop
+   version. I find I frequently accidentally venture slightly outside the game
+   window, causing the game to pause.
+
+[ ]Make dots with other dots behind them translucent. Sometimes a dot is hiding
+   under another dot, causing the player to unfairly lose.
+
+
+Old Issues
+----------
+
+[X]Adjust ball size to make game more playable on phones. This will require
+   adjusting the level setup charts as well.
+
+[X]Implement online leaderboards.
+
+[X]Implement options.
+
+[X]Add combo time indicator.
+
+   [X]I am thinking a translucent circle that diminishes as the timer runs down
+      will do the trick nicely.
+
+[X]Add particle effects.
+
+   [X]Each collected dot should spray particles.
+
+   [X]Smashing into incorrect colored dot should spray particles.
+
+   [X]Possibly generate a large spray of particles to indicate certain points
+      thresholds, similar to Quadnet.
+
+      [X]Particles each time score multiplier resets and points are added to
+         score.
+
+[X]Display received points somehow.
+
+   See above issue.
+
+[X]Possibly make level speed multiplier dependent on number of collected balls
+   instead of elapsed time.
+
+[X]Fix text shadows to match other graphics.
+
+[X]Render higher resolution of combo graphic since we scale it up quite a bit.
+
+[X]Make sure we handle halt and resume correctly for Android.
+
+[X]Implement level colors.
+
+   [X]There will be 10 different level colors. Every 10 levels the same colors
+      will repeat in darker variations.
+
+   [X]Colors will probably start with sky blue and transition over to red for
+      the final color.
+
+[X]Add cancel/back option to menus where applicable.
+
+[X]Show leaderboard after each game when upload is enabled. If your score is on
+   the list, it should be highlighted.
+
+   [X]This screen should display a menu to play again or go back to the intro
+      screen.
+
+[X]Add proper cleanup at exit.
+
+[X]Write documentation.
+
+   [X]Need changelog.
+
+   [X]Need readme.
+
+   [X]Need license.
+
+[X]Add in-game privacy statement.
+
+[X]Finish credits.
+
+[X]Finalize HUD layout.
+
+   [X]Need to show number of lives remaining.
+
+   [X]Need to space everything out so it looks nice.
+
+   [X]Implement emotion graphics.
+
+      [X]Character representation on the HUD should react to what's happening
+         in the game.
+
+         [X]Need to replace emotion graphics with ones that match the size of
+            the in-game graphics.
+
+[X]Add intro screen music.
+
+[X]Change outline of black dot from white to black.
+
+[X]Tweak level colors.
+
+   [X]Adjust level colors so we don't get levels that hurt the player's eyes.
+
+[X]Create project page.
+
+   [X]Add project to database.
+
+   [X]Upload screenshots.
+
+   [X]Upload all versions of the game.
+
+   [X]Upload soundtrack packages.
+
+[X]Create store listing for Google Play.
+
+   [X]Create promo graphics.
+
+   [X]Upload APK.
+
+[X]Make demo video.
+
+[X]Seed leaderboard.
+
+   [X]Erase old scores and add low placeholder scores.
+
+[X]Release game.
+
+   [X]Post announcement on the web site.
+
+   [X]Post announcement on Facebook.
+
+[X]Add color blind mode.
+
+   [X]Probably just add an indicator that shows which dots you can currently
+      collect.
+
+[X]Make a desktop version.
+
+   [X]Desktop version should cut out the track pad area. This will require
+      adding a separate state for the desktop menu screen.
+
+   [X]Use a variable to toggle desktop mode. This way we can still get mobile
+      mode with a command line switch when we want to record a demo video.
+
+   [X]Only use ALLEGRO_ANDROID to autodetect the mobile version. Make other
+      logic use the desktop/mobile variable.
+
+   [X]Use mouse control the game.
+
+   [X]Need to wait for click before starting game.
+
+   [X]Need to wait for click to unpause game.
+
+   [X]Right-click to pause.
+
+   [X]Pause when mouse leaves play area.
+
+   [X]Add ability to enter profile name.
+
+   [X]Put intro menu off screen and transition from title to menu when mouse
+      clicked (transition should be quick). Pressing escape will transition
+      back to the title screen.
+
+   [X]Click to dismiss leaderboard since we can't show the menu.
+
+      [X]Go to retry menu if we are in the post-game leaderboard screen.
+
+[X]Show profile menu on first launch.
+
+[X]Release v1.1
+
+   [X]Build 32- and 64-bit Debian packages.
+
+      [X]Make sure Debian descriptions are properly formatted.
+
+      [X]Make sure we specify all dependencies.
+
+   [X]Build Windows package.
+
+      [X]Docs need to be renamed to license.txt, history.txt, and readme.txt.
+
+         [X]We should have this done automatically by the build script.
+
+   [X]Build Mac package.
+
+   [X]Build source package.
+
+      [X]Write build.txt instructions.
+
+      [X]Make sure all folders are packaged.
+
+   [X]Upload packages.
+
+   [X]Add files to database.
+
+   [X]Post news item.
+
+[X]Push framework changes back to T3F master.
+
+   [X]Build scripts need to be updated.
+
+      [X]Make sure to import changes from makefile.defines.
+
+   [X]Copy template back to T3F master in case we made any changes.

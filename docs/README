@@ -1,0 +1,77 @@
+Dot to Dot Sweep
+----------------
+
+Description
+-----------
+
+Dot to Dot Sweep is an arcade-style color matching game. Collect dots that
+match your color while avoiding all other dots.
+
+The game is inspired by classic arcade games and takes cues from modern games.
+The simple gameplay mechanics coupled with increasingly difficult levels allows
+players of all skill levels to enjoy playing.
+
+Touchpad style controls allow you to maneuver your character quickly and
+precisely.
+
+Try to beat your personal best score or, optionally, compete for the top spot
+on the worldwide leaderboard.
+
+The mobile-centric design allows you to fit gameplay into your busy life. When
+playing you simply lift your finger to pause the game. Interact with your
+notifications and then get right back into the game by placing your finger back
+on the touchpad area.
+
+
+Getting Started
+---------------
+
+Dot to Dot Sweep comes in two flavors, a desktop version and a mobile version.
+
+In the mobile version the action takes place on the top half of the screen and
+input is handled by the bottom half. Menus are displayed on the bottom half of
+the screen and may be interacted with via touch. When in the game, the bottom
+half of the screen acts as a touch pad.
+
+The desktop version uses the mouse and keyboard. You can interact with menus by
+clicking on them. When in the game, you use the mouse to move your character
+around the play field.
+
+
+Playing the Game
+----------------
+
+The goal of the game is to clear the board of the colored dots. To do so you
+must collect the dots that are the same color as your character by running into
+them.
+
+Each time you collect a dot, another dot on the board will change to the
+color of your character. Running into a dot that doesn't match your character's
+color will cause you to lose a life. Additionally, there are black dots that
+cannot be collected and must be avoided. Once all of the non-black colored dots
+are collected, the level ends and you move on to the next one.
+
+When you collect a dot, you have a couple of seconds to collect the next dot
+before your score multiplier resets. When the multiplier resets, your current
+accumulated points are added to your score.
+
+You have three lives and once they are all gone it is game over. Your goal is
+simply to get the high score. Your high score is stored locally and you can
+optionally compete with players worldwide by enabling the Upload Scores option.
+
+
+Contacting Us
+-------------
+
+E-mail:
+
+    todd@t3-i.com
+
+Facebook:
+
+    https://www.facebook.com/pages/T%C2%B3-Software/135435253177843
+
+Snail Mail:
+
+    36 Landon LN
+    Murray, KY 42071

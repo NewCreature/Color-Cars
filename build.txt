@@ -1,0 +1,59 @@
+Dot to Dot Sweep Build Instructions
+-----------------------------------
+
+Binaries for Dot to Dot Sweep are provided for the Windows, Mac, and Debian
+based Linux distributions. If you are using any of those platforms you should
+get the binary package. If your platform is not supported or you just want to
+build it yourself, follow these instructions.
+
+
+Dependencies
+------------
+
+Dot to Dot Sweep is built using GCC, a freely available set of tools. If you are
+trying to build Dot to Dot Sweep then most likely you are using a platform which
+has GCC available. Make sure you have it installed before proceeding.
+
+Dot to Dot Sweep uses some external libraries that you will need to have
+installed before trying to build it. These are:
+
+	* Allegro 5.2 (http://liballeg.org)
+	* libcurl (http://curl.haxx.se)
+
+You will need to make sure you build Allegro 5.2 with the following options
+enabled:
+
+	* PNG support
+	* MOD Music support
+	* TTF support
+
+You will also need to enable these add-ons:
+
+	* Audio
+	* Audio Codec
+	* Font
+	* TTF
+	* Primitives
+	* Memfile
+
+Once you have all of these things installed, you are ready to build Dot to Dot
+Sweep.
+
+
+Building
+--------
+
+Use the following commands to build Dot to Dot Sweep:
+
+	cd /source_package_folder/src
+	make
+
+This will compile all of the source code and put an executable file in the 'bin'
+folder if all goes well.
+
+
+Troubleshooting
+---------------
+
+If you have any trouble building Dot to Dot Sweep and would like assistance,
+feel free to contact us at care@t3-i.com.

@@ -1,0 +1,39 @@
+Dot to Dot Sweep (1.2.1) maverick; urgency=low
+
+  * Fix issues with Android port that were preventing it from working on many
+    devices.
+
+ -- Todd Cope <todd@t3-i.com>  Tue, 19 Feb 2019 22:57:43 +0000
+
+dot-to-dot-sweep (1.2) maverick; urgency=low
+
+  * Upgrade to latest T3F and T3Net frameworks.
+
+ -- Todd Cope <todd@t3-i.com>  Sun, 09 Dec 2018 03:28:39 +0000
+
+dot-to-dot-sweep (1.1.1) maverick; urgency=low
+
+  * Optimize score particle effects to eliminate in-game framerate stuttering.
+  * Fix issue where the mouse cursor would not be displayed on the title screen
+    if you exited the game state while it was hidden.
+
+ -- Todd Cope <todd@t3-i.com>  Sun, 16 Apr 2017 15:19:25 +0000
+
+dot-to-dot-sweep (1.1) maverick; urgency=low
+
+  * Implement desktop mode.
+  * Rebalance scoring to ensure a better balance between cautious and aggressive
+    play styles. Playing it safe and making it through more levels is now a
+    viable way of competing for a high score.
+  * Add visual aid to collectible dots to make the game more playable by people
+    with color blindness.
+  * Add setup wizard to simplify and clarify settings.
+  * Run setup wizard the first time the game is opened.
+
+ -- Todd Cope <todd@t3-i.com>  Wed, 03 Aug 2016 18:34:00 +0000
+
+dot-to-dot-sweep (1.0) maverick; urgency=low
+
+  * Initial release.
+
+ -- Todd Cope <todd@t3-i.com>  Thu, 30 Jun 2016 20:24:00 +0000
