@@ -4,7 +4,7 @@
 typedef struct
 {
 
-	float x, y, z, a, s;
+	float x, y, z, a, s, vs, fs;
 	float vx, vy;
 	float r;
 	int type;

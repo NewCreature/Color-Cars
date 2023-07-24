@@ -580,35 +580,31 @@ void dot_game_move_player(void * data)
 		ox = app->game.player.ball.x;
 		oy = app->game.player.ball.y;
 
-		if(app->touch_id >= 0)
+		if(t3f_key[ALLEGRO_KEY_UP])
 		{
-			if(app->game.player.lost_touch)
+			app->game.player.ball.vs += 0.02;
+			if(app->game.player.ball.vs > 1.0)
 			{
-				if(t3f_distance(app->touch_x, app->touch_y, app->game.player.ball.x, app->game.player.ball.y) < DOT_GAME_GRAB_SPOT_SIZE)
-				{
-					app->game.player.lost_touch = false;
-				}
+				app->game.player.ball.vs = 1.0;
 			}
-			if(!app->game.player.lost_touch)
+			app->game.player.ball.s += app->game.player.ball.vs;
+			if(app->game.player.ball.s > 5.0)
 			{
-				app->game.player.ball.x = app->touch_x + app->game.player.touch_offset_x;
-				app->game.player.ball.y = app->touch_y + app->game.player.touch_offset_y;
-			}
-			if(app->game.player.want_shield)
-			{
-				app->game.shield.x = app->game.player.ball.x;
-				app->game.shield.y = app->game.player.ball.y;
-				app->game.shield.r = app->game.player.ball.r + 1.0;
-				app->game.shield.active = true;
-				app->game.player.want_shield = false;
+				app->game.player.ball.s = 5.0;
 			}
 		}
 		else
 		{
-			app->game.player.lost_touch = true;
-			app->game.state = DOT_GAME_STATE_PAUSE;
-			al_show_mouse_cursor(t3f_display);
+			app->game.player.ball.vs = 0.0;
+			app->game.player.ball.fs = 0.2;
+			app->game.player.ball.s -= app->game.player.ball.fs;
+			if(app->game.player.ball.s < 0.0)
+			{
+				app->game.player.ball.s = 0.0;
+			}
 		}
+		app->game.player.ball.x += cos(app->game.player.ball.a) * app->game.player.ball.s;
+		app->game.player.ball.y += sin(app->game.player.ball.a) * app->game.player.ball.s;
 
 		/* prevent player from moving past the edge */
 		if(app->game.player.ball.x - app->game.player.ball.r < 0.0)
@@ -631,11 +627,11 @@ void dot_game_move_player(void * data)
 		/* if the player has moved, change the angle of the character */
 		if(t3f_key[ALLEGRO_KEY_LEFT] || t3f_key[ALLEGRO_KEY_A])
 		{
-			app->game.player.ball.a -= ALLEGRO_PI / 20.0;
+			app->game.player.ball.a -= ALLEGRO_PI / 40.0;
 		}
 		if(t3f_key[ALLEGRO_KEY_RIGHT] || t3f_key[ALLEGRO_KEY_D])
 		{
-			app->game.player.ball.a += ALLEGRO_PI / 20.0;
+			app->game.player.ball.a += ALLEGRO_PI / 40.0;
 		}
 
 		/* handle combo timer */
@@ -1064,7 +1060,7 @@ void dot_game_render(void * data)
 		if(app->game.state != DOT_GAME_STATE_START)
 		{
 			t3f_draw_scaled_rotated_bitmap(app->bitmap[DOT_BITMAP_BALL_RED + app->game.player.ball.type], t3f_color_white, cx, cy, app->game.player.ball.x, app->game.player.ball.y, app->game.player.ball.z, 0.0, app->game.player.ball.r / cx, app->game.player.ball.r / cy, 0);
-			t3f_draw_scaled_rotated_bitmap(app->bitmap[DOT_BITMAP_BALL_EYES], t3f_color_white, 8.0, 8.0, app->game.player.ball.x, app->game.player.ball.y, app->game.player.ball.z, app->game.player.ball.a, app->game.player.ball.r / ecx, app->game.player.ball.r / ecy, 0);
+			t3f_draw_scaled_rotated_bitmap(app->bitmap[DOT_BITMAP_BALL_EYES], t3f_color_white, 8.0, 8.0, app->game.player.ball.x, app->game.player.ball.y, app->game.player.ball.z, app->game.player.ball.a + ALLEGRO_PI, app->game.player.ball.r / ecx, app->game.player.ball.r / ecy, 0);
 		}
 		if(app->game.combo)
 		{
